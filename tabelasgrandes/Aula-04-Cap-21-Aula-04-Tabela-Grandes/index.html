@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tabelas</title>
+    <style>
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        table {
+            width: 500px;
+            border-collapse: collapse ;
+            /* Obrigatório para ter o título da tabela fixo */
+            position: relative;
+        }
+        td, th {
+            border: 1px solid black;
+            padding: 10px;
+        }
+        thead, tfoot {
+            background-color: gray;
+            color: white;
+        }
+
+        thead > tr > th {
+            /* No título da linha do cabeçalho vou grudar "sticky" */
+            position: sticky; /* grudar */
+            top: 0; /* na posição 0 */
+            background-color: gray;
+
+        }
+        td.num {
+            text-align: right;
+        }
+        caption {
+            /* Tamanho da fonte */
+            font-size: 1.5em;
+            /* Para colocar em negrito */
+            font-weight: bold;
+            /* Para deixar mais espaçado */
+            padding: 10px;
+            /* Colocar um fundo no meu caption */
+            background-color: lightgray;
+
+        }
+        /* Efeito Zebra
+            tdoby > tr - Todo tr que é filho do tdoby
+            pseudo-classe tr:nth-child(2n) - Todo filho atualizando no intervalo de 2 linhas.
+            Outros exemplos:
+            3n - de 3 em 3 linhas;
+            2n-1 - Vai iniciar na primeira linha;
+            odd - Linhas impares;
+            even - Linhas pares;
+
+            Posso também personalisar somente as pares ou impares.
+
+            tbody > tr:nth-child(odd) {
+                background-color: blue;
+            }
+                
+            tbody > tr:nth-child(even) {
+                background-color: yellow;
+            }
+        */
+        tbody > tr:nth-child(2n) {
+            background-color: gray;
+
+        }
+    </style>
+</head>
+<body>
+    <h1>Uso de tabelas grandes22</h1>
+    <!-- Anatomia para tabelas grandes 
+        Table
+            Caption - Legenda da tabela
+            Thead - cabeça
+                TR, TD, TH
+            Tbody - corpo
+                TR, TD, TH
+            Tfoot - pé 
+                TR, TD, TH
+    -->
+    <table>
+        <caption>
+            População das Unidades Federativas
+        </caption>
+        <thead>
+            <tr>
+                <!-- Importante colocar o Escopo do título 
+                    col - colunas
+                    row - linhas 
+                -->
+                <th scope="col">Estado</th>
+                <th scope="col" style="width: 100px">População</th>
+            </tr>
+
+        </thead>
+        <tbody>
+            <tr>
+                <td>São Paulo</td>
+                <td class="num">45.973.190</td>
+            </tr>
+            <tr>
+                <td>Minas Gerais</td>
+                <td class="num">21.322.692</td>
+            </tr>
+            <tr>
+                <td>Rio de Janeiro</td>
+                <td class="num">17.219.679</td>
+            </tr>
+            <tr>
+                <td>Bahia</td>
+                <td class="num">14 850 513</td>
+            </tr>
+            <tr>
+                <td>Paraná</td>
+                <td class="num">11 824 665</td>
+            </tr>
+            <tr>
+                <td>Rio Grande do Sul</td>
+                <td class="num">11 229 915</td>
+            </tr>
+        </tbody>
+        <tfoot>
+            <tr>
+                <th scope="row">Total de Habitantes</th>
+                <td class="num"><strong>122.420.654</strong></td>
+            </tr>
+
+        </tfoot>
+
+    </table>
+        
+</body>
+</html>

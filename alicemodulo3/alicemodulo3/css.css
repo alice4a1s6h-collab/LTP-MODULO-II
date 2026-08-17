@@ -1,0 +1,189 @@
+/* CONFIGURAÇÕES GERAIS */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #f4f4f4;
+    color: rgb(12, 10, 10);
+}
+
+/* CABEÇALHO */
+header {
+    background-color: rgb(11, 10, 10);
+    color: white;
+    padding: 20px 50px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+header h1 {
+    font-size: 28px;
+}
+
+/* MENU */
+nav ul {
+    list-style: none;
+
+    display: flex;
+    gap: 25px;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+nav a:hover {
+    color: #007bff;
+}
+
+/* CONTEÚDO PRINCIPAL */
+main {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 40px 20px;
+}
+
+/* DESTAQUE */
+.destaque {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.destaque h2 {
+    font-size: 32px;
+    color: #222;
+    margin-bottom: 10px;
+}
+
+.destaque p {
+    color: rgb(11, 11, 64);
+}
+
+/* GRADE DE PRODUTOS */
+.produtos {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 25px;
+}
+
+/* CARTÃO DO PRODUTO */
+.card-produto {
+    background-color: white;
+    border-radius: 10px;
+    padding: 20px;
+    text-align: center;
+
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+
+    transition: transform 0.2s;
+}
+
+.card-produto:hover {
+    transform: translateY(-5px);
+}
+
+/* IMAGEM */
+.card-produto img {
+    width: 150px;
+    height: 150px;
+    object-fit: contain;
+    margin-bottom: 15px;
+}
+
+/* TÍTULO */
+.card-produto h3 {
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+
+/* PREÇO */
+.preco {
+    color: #09395c;
+    font-size: 22px;
+    font-weight: bold;
+    margin-bottom: 15px;
+}
+
+/* BOTÃO */
+.card-produto button {
+    background-color: #2281a1;
+    color: white;
+
+    border: none;
+    border-radius: 5px;
+
+    padding: 10px 25px;
+
+    font-size: 16px;
+    font-weight: bold;
+
+    cursor: pointer;
+}
+
+.card-produto button:hover {
+    background-color: #0060e6;
+}
+
+/* RODAPÉ */
+footer {
+    background-color: #222;
+    color: white;
+
+    text-align: center;
+    padding: 30px 20px;
+
+    margin-top: 40px;
+}
+
+footer p {
+    margin-bottom: 10px;
+}
+
+/* REDES SOCIAIS */
+.redes-sociais {
+    margin: 15px 0;
+}
+
+.redes-sociais a {
+    color: #18047e;
+    text-decoration: none;
+    margin: 0 10px;
+}
+
+.redes-sociais a:hover {
+    color: white;
+}
+
+/* RESPONSIVIDADE */
+@media (max-width: 900px) {
+    .produtos {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    header {
+        flex-direction: column;
+        gap: 20px;
+    }
+}
+
+@media (max-width: 600px) {
+    .produtos {
+        grid-template-columns: 1fr;
+    }
+
+    nav ul {
+        flex-direction: column;
+        text-align: center;
+        gap: 10px;
+    }
+
+    
+}
